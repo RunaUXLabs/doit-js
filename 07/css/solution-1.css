@@ -1,0 +1,76 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 400px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#userInput {
+  list-style: none;
+  width: 100%;
+  margin: 40px 0 0 0;
+}
+#userInput li {
+  display: flex;
+  align-items: center;
+}
+#userInput label {
+  flex: 0 0 50px;
+  margin-right: 10px;
+  line-height: 30px;
+}
+#userInput input {
+  flex: 1;
+  height: 30px;
+  margin-bottom: 10px;
+  padding: 0 5px;
+}
+button {
+  width: 300px;
+  padding: 15px;
+  margin: 0 auto;
+}
+#attendant {
+  margin-top: 20px;
+}
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+tr.focus {
+  background-color: #d7d7d7;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: relative;
+}
+th:first-of-type {
+  width: 150px;
+}
+th:last-of-type {
+  width: 250px;
+}
+
+/* 삭제버튼 추가 */
+.delButton:hover {
+  cursor: pointer;
+  color: red;
+}
+.delButton {
+  padding: 5px 10px;
+  font-size: 1.2em;
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+}
+/* absolute로 버튼 고정 해도 되고, 첫번째 td에 flex를 넣어서 space-between을 설정해도 된다. 굳이 absolute를 쓴 이유는 table 식구들의 display 속성(table)을 변경하면 일이 더 커짐 */

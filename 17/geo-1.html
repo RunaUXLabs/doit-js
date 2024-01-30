@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지오로케이션 API 연습</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+    }
+
+    #result {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="getLocation">위치 정보 가져오기</button>
+  <div id="result"></div>
+
+  <script src="js/geo1.js"></script>
+</body>
+
+</html>
+
+<!-- geo1.html(1회성) geo2.html(시간단위별) github에 올려놓고, 학원 이외의 장소에서 위치정보 추출하기(캡쳐) => 다음날 지도에서 찍어보기.
+현재 실시간 정보를 지도에 표현하는 방법으로 응용해 보기 -->
+
+<!-- geo2.html(시간단위별)를 응용하여 내가 지나온 궤적을 지도에 찍어보면 걷기/달리기 어플에서 본 내용처럼 속도, 소비칼로리, 움직인 궤적들을 보여주는 운동어플 초안 구성가능 -->

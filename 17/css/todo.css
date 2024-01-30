@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5em;
+}
+
+header, form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+form label {
+  display: none;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+}
+
+#container {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#todo-list {
+  min-width: 30%;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* todo 항목 커스텀 */
+.todo {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  gap: 5px;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+.todo .todo-content {
+  flex: 3 1 60%;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  background: #e1e1e1;
+}
+.todo button {
+  flex: 0 0 15%;
+  border: none;
+  color: #fff;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.todo button.complete-button { background: #2D4B73; } 
+.todo button.delete-button { background: #F24822; } 

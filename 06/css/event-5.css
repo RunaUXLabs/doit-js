@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+h2{ margin: 50px 0 0 0; }
+input {
+  width:300px;
+  height:38px;
+  text-align:center;
+}
+
+#bttn {
+  padding : 10px 20px;
+  border: 1px solid #ccc;
+}
+
+#result {
+  margin-top:50px;
+  padding:15px 20px;
+  background-color:azure;
+  text-align:center;
+  font-size:2.5em;
+  font-weight: bold;
+}
+

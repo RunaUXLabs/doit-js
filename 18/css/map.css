@@ -1,0 +1,64 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+#map {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* 카카오맵 인포윈도우 */
+.iw {
+    padding: 5px;
+    /* width: 100%; */
+    /* background: red; */
+    font-size: 0.9rem;
+    /* display: block; */
+}
+
+/* 카카오맵 커스텀오버레이 */
+.customOverlay {
+    margin: -100px;
+    background: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #d7d7d7;
+    border-radius: 16px;
+}
+
+/* 로티파일 */
+.lottie {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: block;
+    width: 50%;
+    height: 50%;
+    /* box-shadow: 0 0 200px 200px rgba(0, 0, 0, 0.5); */
+    /* 그림자는 svg배경 밖으로 생김 */
+}
+.lottie::after {
+    content: '데이터 로딩중 입니다';
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    display: block;
+    margin: -100px 0 0 0;
+}
+.lottie.off {
+    display: none;
+}

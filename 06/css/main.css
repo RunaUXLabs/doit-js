@@ -1,0 +1,22 @@
+@charset "UTF-8";
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body {
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  padding : 10px 20px;
+  border-style: solid;  
+}
+p {
+  margin:20px;
+  font-size:2em;  
+}
+.green{ background: green; }

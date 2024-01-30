@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/modal-result.css">
+</head>
+
+<body>
+  <button id="open">프로필 보기</button>
+
+  <div id="modal-box">
+    <div id="modal-contents">
+      <button id="close">&times;</button>
+      <h1 id="title">My Profile</h1>
+      <div id="profile">
+        <img src="images/pf.png" alt="도레미">
+        <div id="desc">
+          <p class="user">이름 : 도레미</p>
+          <p class="user">주소 : somewhere</p>
+          <p class="user">연락처 : 1234-5678</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="open2">1단 모달 프로필 보기</button>
+  <!-- 1단으로 구성된 모달박스, css 박스쉐도우와 transfom을 이용하여 중앙에 띄우기 -->
+  <div id="modalcontents2">
+    <button id="close2">&times;</button>
+    <h1 id="title2">My Profile</h1>
+    <div id="profile2">
+      <img src="images/pf.png" alt="도시라">
+      <div id="desc2">
+        <p class="user">이름 : 도시라</p>
+        <p class="user">주소 : somewhere</p>
+        <p class="user">연락처 : 1234-5678</p>
+      </div>
+    </div>
+  </div>
+  <script src="js/modal-result.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+#container {
+	width: 450px;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	font-size: 1.5rem;
+}
+
+form {
+	width: 100%;
+	margin-top: 50px;
+	padding-left: 50px;
+}
+label {
+	margin-right: 20px;
+}
+input[type="text"] {
+	width: 60px;
+	height: 30px;
+	text-align: center;
+	margin-right: 10px;
+	border: none;
+	border-bottom: 1px solid #ccc;
+}
+#bttn {
+	padding: 10px 20px;
+}
+#result {
+	margin-top: 50px;
+	width: 400px;
+	border: 1px solid #ccc;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 0.9rem;
+	gap: 10px;
+}
+.accent {
+	font-size: 1.2em;
+	font-weight: bold;
+}

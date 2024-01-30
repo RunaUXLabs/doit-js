@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event 객체</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body{overflow: hidden;}
+    p {
+      font-size:1.2rem;
+      margin-bottom:20px;
+    }
+    #box{
+      width:400px;
+      height:400px;
+      border:1px solid #222;
+      border-radius:5%;
+    }
+    span{
+      font-size: 1.5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+    span.on{
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <p>사각형 내부에서 마우스를 움직이면서 콘솔 창을 확인해 보세요.</p>
+  <p>사각형을 벗어나면 위치를 표시하지 않습니다. </p>
+  <div id="box">
+  </div>
+  <span>😎</span>
+  <script src="js/ex-3.js"></script>
+</body>
+</html>

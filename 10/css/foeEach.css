@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* forEach()를 통해 탭구조 만들기 */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li{ list-style: none; }
+a, a:link{ 
+    text-decoration: none;
+    color: inherit;
+}
+/* 입맛대로 */
+a:hover, a:active, a:visited{ color: red; }
+
+main{
+    width: 100%;
+    max-width: 1080px;
+    margin: 50px auto 0;
+}
+.tabButtons{
+    display: flex;
+    gap: 5px;
+}
+.tabButtons > button{
+    padding: 5px 20px;
+}
+.tabButtons > button.on{
+    background: #444;
+    color: #fff;
+}
+.tabContents > div{
+    display: none;
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid #777;
+}
+.tabContents > div.on{
+    display: flex;
+}

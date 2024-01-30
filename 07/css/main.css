@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #222;
+  color: #fff;
+  text-transform: uppercase;
+}

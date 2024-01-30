@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #295500;
+  overflow: hidden;
+}
+#result {
+  color: #fffafa;
+  padding: 20px;
+  width: 1200px;
+}
+.quote {
+  /* font-family: "Georgia", serif; */
+  font-family: 'Kalnia', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.author {
+  font-family: 'Kalnia', serif;
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  font-style: italic;
+}

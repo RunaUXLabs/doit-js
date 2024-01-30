@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지오로케이션 API 연습</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+    }
+
+    #result {
+      padding: 10px 20px;
+    }
+
+    #kakaoMap {
+      height: 300px;
+    }
+
+    .iw {
+      padding: 5px
+    }
+  </style>
+</head>
+
+<body>
+  <h1>지오로케이션 API 연습</h1>
+  <section>
+    <h2>navigator.geolocation에서 위치정보 가져오기</h2>
+    <button id="getLocation">가져오기</button>
+    <div id="result"></div>
+  </section>
+
+  <section>
+    <h2>구글맵검색과 navigator.geolocation를 이용하여 내주변 음식점 표시</h2>
+    <div id="restaurant"></div>
+  </section>
+
+  <section>
+    <h2>navigator.geolocation으로 카카오맵에 현재 내위치 표시</h2>
+    <div id="kakaoMap"></div>
+  </section>
+
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b31533f3cc94ccccfa6d5299d0c9c051"></script>
+  <script src="js/geo2.js"></script>
+</body>
+
+</html>

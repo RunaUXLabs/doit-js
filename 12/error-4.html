@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예외 처리</title>
+</head>
+
+<body>
+  <h1>예외 처리했을 때</h1>
+
+  <script>
+    try {
+      console.log("시작");
+      add;
+      console.log("실행 중...");
+    } catch (err) {
+      // 파라미터로 쓰는 err은 에러 객체임. 그 안의 키와 값을 나누어 세분화해 출력가능
+      console.error(`오류 발생 : ${err}`);
+      console.error(`오류 발생 : ${err.name}`);
+      // 다양한 케이스의 에러를 처리할 수 있는 수준이 되면 err.name으로 들어오는 값을 비교하여 if문으로 분기하여 에러처리한다. (문법에러와 참조에러)
+      console.error(`오류 발생 : ${err.message}`);
+    } finally {
+      console.log("끝");
+    }
+  </script>
+</body>
+
+</html>
