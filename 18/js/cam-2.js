@@ -9,7 +9,7 @@ let 지도상자 = document.querySelector('#map'), // 지도를 표시할 div
         level: 12 // 지도의 확대 레벨
     };
 // 공공데이터포털에서 캠핑장정보 가져옴 // 3553개, 100개만 임시테스트 해볼것
-let url3 = `https://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=test&serviceKey=gptlfeF0tckKWZugnRmyvS4wuIp7K2dDyLC9SjDzp%2BIk8HEEiN8OH9m9Xm1%2BH%2FIvBWPxcRBQ8mhpUGvA9n9yVA%3D%3D&_type=json`;
+let url3 = `https://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=test&serviceKey=서비스키입력&_type=json`;
 
 fetch(url3)
     .then(결과 => 결과.json())

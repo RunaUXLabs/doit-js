@@ -2,7 +2,7 @@
 // let url = `https://apis.data.go.kr/B551011/GoCamping/basedList?serviceKey=gptlfeF0tckKWZugnRmyvS4wuIp7K2dDyLC9SjDzp%2BIk8HEEiN8OH9m9Xm1%2BH%2FIvBWPxcRBQ8mhpUGvA9n9yVA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest`;
 
 // 인증키 분리
-let key = `gptlfeF0tckKWZugnRmyvS4wuIp7K2dDyLC9SjDzp%2BIk8HEEiN8OH9m9Xm1%2BH%2FIvBWPxcRBQ8mhpUGvA9n9yVA%3D%3D`;
+let key = '서비스키입력';
 
 let url2 = `https://apis.data.go.kr/B551011/GoCamping/basedList?serviceKey=${key}&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest`;
 

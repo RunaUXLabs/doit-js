@@ -18,7 +18,7 @@ var clusterer = new kakao.maps.MarkerClusterer({
 });
 
 // 서버에서 가져오기 // 3744
-const url = 'https://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=3744&pageNo=1&MobileOS=ETC&MobileApp=TEST&serviceKey=gptlfeF0tckKWZugnRmyvS4wuIp7K2dDyLC9SjDzp%2BIk8HEEiN8OH9m9Xm1%2BH%2FIvBWPxcRBQ8mhpUGvA9n9yVA%3D%3D&_type=json';
+const url = 'https://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=3744&pageNo=1&MobileOS=ETC&MobileApp=TEST&serviceKey=서비스키입력&_type=json';
 
 fetch(url)
   .then(res => res.json())
