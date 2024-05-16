@@ -13,16 +13,19 @@
   <p>새로 고침해 보세요</p>
 
   <script>
+    //함수 정의(선언)
     function random(number) {
       return Math.floor(Math.random() * number);
     }
 
+    //함수 정의(선언)
     function bgChange() {
       const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
       console.log(rndCol);
       document.body.style.backgroundColor = rndCol;
     }
 
+    //함수 호출(콜링)
     bgChange();
   </script>
 </body>
