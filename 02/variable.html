@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>variable</title>
+</head>
+
+<body>
+
+  <script>
+    // 주의)REPL개념으로 콘솔에서 테스트 해볼 때엔 에러가 안남
+    // 변수선언과 값 할당을 하고, 변수에 재할당하는법
+    // 재할당을 할 때엔 예약어를 떼내야 한다.
+    let name = '미경';
+    name = '루나';
+    console.log(name);
+
+    // let 예약어는 재선언 안됨, 재할당 됨
+    // let name01 = '미경';
+    // let name01 = '루나';
+    // console.log(name01)
+
+    // var 예약어의 문제점, 재선언/재할당 유연함
+    // var name01 = '미경';
+    // var name01 = '루나';
+    // console.log(name01)
+
+    // 이도저도 안되는 const
+    const name02 = '미경';
+    name02 = '미경';
+    console.log(name02);
+
+  </script>
+</body>
+
+</html>
