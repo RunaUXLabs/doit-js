@@ -4,17 +4,18 @@
 // if (x < 5) {
 //   console.log(`x는 5보다 작습니다`);
 // }
+// console.log(`x는 5보다 큽니다`);
 
-// if(x < 5){
-//   console.log(`x는 5보다 작습니다`)
-// } else{
-//   console.log(`x는 5보다 큽니다`)
+
+// if (x < 5) {
+//   console.log(`x는 5보다 작습니다`);
+// } else {
+//   console.log(`x는 5보다 큽니다`);
 // }
 
-// if(false){
-//   console.log(`x는 5보다 작습니다`)
+// if (true) {
+//   console.log(`x는 5보다 작습니다`);
 // }
-
 // console.log(`if문 탈출`);
 
 // if(조건){실행문1}else{실행문2}
