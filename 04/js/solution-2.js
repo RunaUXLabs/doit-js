@@ -1,9 +1,10 @@
 // 최대공약수 : Greatest Common Divisor (GCD)
 
+// 내가 입력한 두 수에서 공통된 약수를 찾고, 그 중 가장 큰 약수를 찾겠다
 function getGCD(n, m) {
-  // 내가 입력한 두 수에서 공통된 약수를 찾고, 그 중 가장 큰 약수를 찾겠다
   let max = n > m ? n : m;
   // 파라미터 두개를 비교해서 큰 수를 max변수에 할당
+  // 참고)어차피 공약수라면 작은수만 찾아서 할당해도 됨
   let GCD = 0;
 
   for (let i = 1; i <= max; i++) {
@@ -22,4 +23,5 @@ function getGCD(n, m) {
 
 let p1 = prompt('최대공약수를 구할 첫번째 숫자 입력');
 let p2 = prompt('최대공약수를 구할 두번째 숫자 입력');
-console.log(`${p1}과 ${p2}의 최대공약수 : ${getGCD(p1, p2)}`);
+document.write(`${p1}과 ${p2}의 최대공약수 : ${getGCD(p1, p2)}`);
+// console.log(`${p1}과 ${p2}의 최대공약수 : ${getGCD(p1, p2)}`);

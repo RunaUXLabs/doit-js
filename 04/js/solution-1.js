@@ -1,3 +1,4 @@
+// 숫자만 들어왔을 때 분리하는 함수, 문자가 들어왔을 때 처리는 저 밑에서 함
 function isPositive(n) {
   if (n > 0) {
     alert(`${n}은 양수입니다.`);
@@ -9,7 +10,6 @@ function isPositive(n) {
 }
 
 const number = prompt('숫자를 입력하세요.');
-console.log(number)
 const Int_number = parseInt(number);
 /**
  * parseInt()를 거친 값이 숫자가 아니라면 NaN이나오지만,
