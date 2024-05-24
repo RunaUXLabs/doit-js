@@ -1,7 +1,7 @@
 const students = ["Park", "Kim", "Lee", "Kang"];
 
 // for(변수 of 배열명) {실행문}
-for (let student of students) {  
+for (let student of students) {
   // document.write(`${student},<br> `);
   // 배열 안에서 값만 출력함
   // for..of문에서 값을 쓰고 싶으면${변수명}을 써주면 된다
@@ -16,7 +16,7 @@ for (let student of students) {
 
 
 //혹시 배열에 for ...in을 쓰면?
-for(let student in students){
+for (let student in students) {
   // document.write(`${student}<br>`);
   // 0123 배열에는 키가 없으므로 키를 담당하는 인덱스 번호가 출력
   // document.write(`${students[student]}<br>`);
