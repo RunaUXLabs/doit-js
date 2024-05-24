@@ -12,7 +12,7 @@ function getData(c) {
 // 해당 함수는 userName과 userAge를 입력받아 실행된다.
 
 
-// getData(showData);
+getData(showData);
 /**
  * getData()함수에 showData라는 파라미터를 넣었다(함수명 삽입)
  * c(userName, userAge)라는 함수가 콜링이 되었으니
@@ -21,11 +21,11 @@ function getData(c) {
  */
 
 // 비효율적인 구조이지만, 콜백함수의 흐름을 외부함수 콜링형식으로 짜보자.
-function foodMsg(callback) {
-  let food = prompt("점심 뭐드실건가요?🥪");
-  callback(food);
-}
-function callMsg(meal) {
-  alert(`점심시간에는 꼭 ${meal}을 드셨으면 좋겠어요😋`);
-}
-foodMsg(callMsg);
+// function foodMsg(callback) {
+//   let food = prompt("점심 뭐드실건가요?🥪");
+//   callback(food);
+// }
+// function callMsg(meal) {
+//   alert(`점심시간에는 꼭 ${meal}을 드셨으면 좋겠어요😋`);
+// }
+// foodMsg(callMsg);

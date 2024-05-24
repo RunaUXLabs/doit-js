@@ -1,16 +1,26 @@
 const btn = document.querySelector("button");
 // 버튼 요소 가져옴
 
-btn.addEventListener("click", () => {
-  //  버튼 클릭하면 alert 실행
-  alert("클릭했습니다.2222");
-});
+// btn.addEventListener("click", () => {
+//   //  버튼 클릭하면 alert 실행
+//   alert("클릭했습니다.2222");
+// });
 
 // 대상.addEventListener("이벤트명", 함수명);
 
 // 따로 선언한 함수가 없다면 직접입력
 // 대상.addEventListener("이벤트명", function(){});
 // 대상.addEventListener("이벤트명", ()=>{});
+
+
+// 외부로 빠진 화살표함수를 콜백함수로 가지고 올 때도, 함수명만 쓰면 된다. 화살표함수는 변수에 할당되어 있기 때문에 변수를 콜백 자리에 넣으면 된다.
+// let display = () => {
+//   alert("클릭했습니다.");
+// };
+// btn.addEventListener("click", display);
+
+
+
 
 // 내가 만드는 함수는 파라미터를 어떻게넣든 상관없음.
 // 내장함수는 파라미터의 위치가 지정되어있다.

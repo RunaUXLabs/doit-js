@@ -20,6 +20,6 @@ bttn.addEventListener("click", display);          // 버튼 클릭하면 display
 // });
 
 // bttn.addEventListener("click", display());
-// 함수명 쓰는 영역에 ()를 쓰면 문서가 읽히면서 즉시 실행된다.
+// 함수명 쓰는 영역에 ()를 쓰면 문서가 읽히면서 즉시실행(1회성)된다. 그 다음에 클릭 이벤트가 적용되지 않는다.
 // 콜링되지 않게 조심할것, 우리의 목적은 '클릭하면'이다.
 

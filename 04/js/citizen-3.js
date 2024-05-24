@@ -13,7 +13,7 @@ let init = () => {
 
 // console.log(`${init()}`);
 // 오해할 수 있는 부분, init함수는 파라미터가 없다.
-// console.log(`${init(30, 20)}`);
+console.log(`${init(30, 20)}`);
 // return에 적혀있는 함수가 고대로 나옴
 
 
