@@ -28,6 +28,8 @@ document.querySelector('h1 > span').textContent = number;
 // 배열값도 넣기(전개구문)
 // p.148 전개구문은 배열의 값을 스트링으로 바꿔준다
 document.querySelector('p > span').textContent = [...arr];
+// document.querySelector('p > span').textContent = arr;
+// 걍 배열 쓰는 것과 같지만! 일부러 배열 값들을 ,를 살려서 넣는다고 소스에서 보여주는 중 
 
 let comment2 = ``;
 for (data of arr) {
