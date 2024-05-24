@@ -4,11 +4,12 @@ console.log(...fruits);
 //전개구문, 값만 쏙 뽑아서 출력
 
 
-function addNum(a, b) {
-  return a + b;
-}
-console.log(addNum(1, 3)); //4 
-console.log(addNum(1, 3, 5, 7)); //4
+// function addNum(a, b) {
+//   return a + b;
+// }
+// console.log(addNum(1, 3)); //4 
+// console.log(addNum(1, 3, 5, 7)); //4
+// console.log(addNum(1)); //4
 
 
 // 전개구문을 파라미터에 사용하면, 파라미터의 갯수와는 상관없이 유연한 계산을 해준다.
@@ -19,12 +20,12 @@ function addNum2(...numbers) {
   for (let number of numbers) sum += number;
   return sum;
 }
-console.log(addNum2(1, 3)); //4
-console.log(addNum2(1, 3, 5, 7)); //16
+// console.log(addNum2(1, 3)); //4
+// console.log(addNum2(1, 3, 5, 7)); //16
 
 
 const arr = [1, 3, 7, 53, 43, 18, 9, 11, 13, 15, 17, 19, 1, 2, 50, 100, 6, 4];
-console.log(addNum2(arr)); // 스트링으로 그냥 찍힘
+console.log(addNum2(arr)); // 스트링으로 그냥 찍힘, 가장 실수 많이 하는 부분
 console.log(addNum2(...arr)); // 인자에 전개구문형식으로 콜링하기
 
 function multipleNum3(...numbers) {
