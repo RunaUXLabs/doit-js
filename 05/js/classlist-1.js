@@ -20,5 +20,6 @@ desc.onclick = () => {
   // document.querySelectorAll()은 유사배열로 처리해야한다.
 
   // 개선
-  for (const p of document.querySelectorAll("#desc p")) p.classList.remove("user");
+  let ps = document.querySelectorAll("#desc p");
+  for (const p of ps) p.classList.remove("user");
 };
