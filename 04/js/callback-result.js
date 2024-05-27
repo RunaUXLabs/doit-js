@@ -6,7 +6,7 @@ function getData(c) {
   let userName = prompt("이름을 입력하세요.");
   let userAge = prompt("나이를 입력하세요.");
   c(userName, userAge);
-  // 뭔지모르는 c함수가 콜링됐다(인자1, 인자2)
+  // 뭔지 모르는 c가 함수로 콜링됐다(인자1, 인자2)
 }
 // 파라미터에 함수를 넣는 형식으로 getData()를 만들었다.
 // 해당 함수는 userName과 userAge를 입력받아 실행된다.
