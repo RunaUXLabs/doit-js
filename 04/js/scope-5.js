@@ -91,29 +91,30 @@ function calc(num) {
 } // 함수를 선언할 때, 반환에 필요한 파라미터를 선언해준 함수로 바꿔야 한다.(핵심!!!)
 
 // 블록스코프
-// {
-//   // 책내용
-//   // let result = calc(30); // 인자 넣어서 함수콜링후 리턴값을 변수에 할당
-//   // console.log(`result : ${result} `);
+{
+  // 책내용
+  // let result = calc(30); // 인자 넣어서 함수콜링후 리턴값을 변수에 할당
+  // console.log(`result : ${result} `);
 
-//   let calc = function (num) {
-//     return num * factor;
-//   };
-//   console.log(calc(30));
-//   // 교수응용, 익명함수로 바꿔놓는다.
-//   // 지역변수로 선언된 익명함수
+  // let calc = function (num) {
+  //   return num * factor;
+  // };
+  console.log(calc(30));
+  // 교수응용, 익명함수로 바꿔놓는다.
+  // 지역변수로 선언된 익명함수
+  // 콜링할 때 인자를 넣기 때문에, calc함수안에서 num을 모른다고 할 수 없다.
 
-//   // 책내용
-//   let result = calc(50);
-//   console.log(`result : ${result} `);
-//   console.log(`${calc(100)}`); // 교수변경, 밖에서 콘솔
+  // 책내용
+  // let result = calc(50);
+  // console.log(`result : ${result} `);
+  // console.log(`${calc(100)}`); // 교수변경, 밖에서 콘솔
 
 
 
-//   // 99라인의 익명함수를 화살표함수로 변환하여 지역변수에 할당
-//   // let calc3 = (num) => { return num * factor; };
-//   let calc3 = num => num * factor; // 화살표함수 축약
-// }
+  // 99라인의 익명함수를 화살표함수로 변환하여 지역변수에 할당
+  // let calc3 = (num) => { return num * factor; };
+  // let calc3 = num => num * factor; // 화살표함수 축약
+}
 
 // 블록스코프 안에서 선언된 let, const 변수들은 못나오는게 맞다.
 //(참고) 파라미터는 기본적으로 var로 선언된 변수이며, 생략되어서 안보이는 것 뿐
