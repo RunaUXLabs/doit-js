@@ -2,20 +2,24 @@ const number1 = document.querySelector("#number1");
 const number2 = document.querySelector("#number2");
 const button = document.querySelector("button");
 let result = document.querySelector("#result");
-
-button.onclick = function (e) {
-  // 버튼에 대한 기본기능 막기
-  // e.preventDefault()
-  // 기존 답
-  // result.innerText = getGCD(number1.value, number2.value);
-
+function getGCD(n, m) {
+  let max = n > m ? n : m;
+  let GCD = 0;
+  for (let i = 1; i <= max; i++) {
+    if (n % i === 0 && m % i === 0) {
+      GCD = i;
+    }
+  }
+  return GCD;
+}
+let gcdHandler = () => {
   // 응용답
   const Int_number1 = parseInt(number1.value);
   const Int_number2 = parseInt(number2.value);
   /**
    * parseInt()를 거친 값이 숫자가 아니라면 NaN이나오지만,
    * 이를 typeof()로 물어보면 무조건 number로 나온다.
-
+  
    * NaN값은 falsy이므로 false로 취급됨. 조건문에는 true값만 넣을 수 있다.
    * if (변수 !== NaN) {}은 쓸수 있지만, 반대 경우를 판별해 낼 수 없다.
    * isNaN()은 어떤 값이 NaN인지 판별가능. 주어진 값이 NaN이면 true, 아니면 false.
@@ -56,15 +60,15 @@ button.onclick = function (e) {
     result.innerText = getGCD(number1.value, number2.value);
   }
 };
+// button.onclick = function (e) {
+// 버튼에 대한 기본기능 막기
+// e.preventDefault()
+// 기존 답
+// result.innerText = getGCD(number1.value, number2.value);
+// };
+button.addEventListener('click', gcdHandler);
+document.gcdCheck.addEventListener('keydown', (e) => {
+  if (e.key == 'Enter') gcdHandler();
+})
 
-function getGCD(n, m) {
-  let max = n > m ? n : m;
-  let GCD = 0;
-  for (let i = 1; i <= max; i++) {
-    if (n % i === 0 && m % i === 0) {
-      GCD = i;
-    }
-  }
-  return GCD;
-}
 
