@@ -15,3 +15,16 @@ function displaySelect() {
 selectMenu.addEventListener('change', displaySelect);
 
 // 셀렉트박스를 하나 더 추가해서 위의 alert으로 뜨게 만들어보자
+
+/**
+ * 체크박스에서 '선택된' 요소를 가지고 올 때,
+ * document.querySelectorAll("input[name='mailing']:checked")을 사용해야한다.
+ * 1. document.querySelector("input[name='mailing']:checked") 쓰면?
+ * 	 선택자가 and조건으로 3가지가 다 true여야지만 그 요소를 찾아 태그째 반환
+ *   조건 설명: input이고, name이 mailing, 선택이 되어있는 요소 찾기
+ *   해당조건을 만족하지 않으면 null로 반환됨
+ * 2. 내가 원하는건 그 많은 체크박스중에 선택된 요소만 갖고싶은데요!
+ *   document.querySelectorAll('선택된 상태 선택자 구성')로 출력시
+ *   선택된 애만 추려서 배열에 담아서 반환한다.
+ */
+
