@@ -10,6 +10,9 @@ function changeBackground() {
   document.body.style.backgroundColor = "green";
 }
 //요소.addEventListener('이벤트명', 함수명)
+button.addEventListener('click', () => {
+  alert('메롱');
+});
 button.addEventListener('click', changeBackground);
 // 이벤트가 여러개 걸려있는것이 전부 실행됨
 
