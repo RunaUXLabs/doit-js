@@ -1,7 +1,8 @@
 const button = document.querySelector("button");
 
 // button.onclick = function () {
-//   document.body.style.backgroundColor = "green";
+//   // document.body.style.backgroundColor = "green";
+//   document.body.classList.toggle('green');
 // };
 
 button.addEventListener('mouseover', () => {
