@@ -10,8 +10,8 @@ button.onclick = function (e) {
   // result.innerText = getGCD(number1.value, number2.value);
 
   // 응용답
-  const Int_number1 = parseInt(number1.value)
-  const Int_number2 = parseInt(number2.value)
+  const Int_number1 = parseInt(number1.value);
+  const Int_number2 = parseInt(number2.value);
   /**
    * parseInt()를 거친 값이 숫자가 아니라면 NaN이나오지만,
    * 이를 typeof()로 물어보면 무조건 number로 나온다.
@@ -25,12 +25,14 @@ button.onclick = function (e) {
     if (number1.value == "") {
       // 공백일경우
       result.innerText = '첫번째 값을 입력하세요.';
+      number1.focus();
       return false;
     }
     if (number1.value.length > 0) {
       // 문자열일경우
       result.innerText = '문자는 계산이 되질 않습니다. 첫번째 값을 다시 입력하세요';
       number1.value = "";
+      number1.focus();
       return false;
     }
   }
@@ -45,6 +47,7 @@ button.onclick = function (e) {
       // 문자열일경우
       result.innerText = '문자는 계산이 되질 않습니다. 두번째 값을 다시 입력하세요';
       number2.value = "";
+      number2.focus();
       return false;
     }
   }
