@@ -23,21 +23,26 @@ btn.addEventListener("click", (e) => {
 
   // 첫번째 td에 입력한 이름 넣기
   let nameTd = document.createElement("td");
-  nameTd.innerHTML = `
-    <span class="delButton">&cross;</span> ${username.value}  
+  nameTd.innerHTML = `${username.value}  
   `; // css에서 delButton의 위치 고정시킴
 
   // 두번째 td에 입력한 전공 넣기
   let majorTd = document.createElement("td");
   majorTd.textContent = `${major.value}`;
 
-  // 정보 전송 다했으면 공백으로 돌리기
+  // 세번째 td에 삭제버튼 넣기
+  let delTd = document.createElement("td");
+  delTd.innerHTML = `<span class="delButton">&cross;</span> `;
+
+  // 정보 전송 다했으면 공백으로 돌리고, 포커스 이동
   username.value = "";
   major.value = "";
+  username.focus();
 
-  // 두 td를 tr에 추가하기
+  // 세 td를 tr에 추가하기
   newTr.appendChild(nameTd);
   newTr.appendChild(majorTd);
+  newTr.appendChild(delTd);
 
   // 새 tr을 tbody에 추가하기
   tbody.appendChild(newTr);

@@ -45,6 +45,12 @@ table {
   border: 1px solid #ccc;
   border-collapse: collapse;
 }
+#attendant col:first-child {
+  width: 30%;
+}
+#attendant col:last-child {
+  width: 20%;
+}
 tr.focus {
   background-color: #d7d7d7;
 }
@@ -70,7 +76,7 @@ th:last-of-type {
   font-size: 1.2em;
   position: absolute;
   top: 50%;
-  left: -40px;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-/* absolute로 버튼 고정 해도 되고, 첫번째 td에 flex를 넣어서 space-between을 설정해도 된다. 굳이 absolute를 쓴 이유는 table 식구들의 display 속성(table)을 변경하면 일이 더 커짐 */
+/* absolute로 버튼 고정 해도 되고, td에 flex를 넣어서 정렬을 설정해도 된다. 하지만 굳이 absolute를 쓴 이유는 table 식구들의 display 속성(table-*)을 변경하면 테이블이 무너져서 일이 더 커짐 */
