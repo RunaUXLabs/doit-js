@@ -27,7 +27,7 @@ const items = document.querySelectorAll("li"); // li 모든 항목 가져와서 
 
 // this와 화살표함수를 같이쓰면?
 for (let item of items) {
-  // item.addEventListener('click', () => this.remove(this))
+  // item.addEventListener('click', () => this.remove(item))
   // 화살표 함수에서의 this는 내가 클릭한 item을 지칭하는것이 아니라 window객체를 가르키므로 이벤트가 먹지 않는다.
-  item.addEventListener('click', function () { this.remove(this); });
+  item.addEventListener('click', function () { this.remove(item); });
 }
