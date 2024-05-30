@@ -1,5 +1,5 @@
 const result = document.querySelector("#result"); // 결괏값을 표시할 부분
-const radius = parseInt(prompt("반지름의 크기는? "));
+const radius = Number(prompt("반지름의 크기(cm)는? "));
 /**
  * parseInt()를 거친 값이 숫자가 아니라면 NaN이나오지만,
  * 이를 typeof()로 물어보면 무조건 number로 나온다.
@@ -18,7 +18,7 @@ if (!isNaN(radius)) {
   // 소수점 이하 3자리까지 표시
   result.innerText = `
     반지름 : ${radius},
-    원의 넓이 : ${area(radius).toFixed(1)},
-    원의 둘레 : ${circum(radius).toFixed(1)}
+    원의 넓이 : ${area(radius).toFixed(1)} cm2,
+    원의 둘레 : ${circum(radius).toFixed(1)} cm
   `;
 } else result.innerText = `정확한 입력을 해주시기 바랍니다`;
