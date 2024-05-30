@@ -39,6 +39,6 @@ raffle.addEventListener("click", (e) => {
     );
   }
 
-  result.innerText = `당첨자 번호 : ${[...winner]}`;
+  result.textContent = `당첨자 번호 : ${[...winner]}`;
   result.classList.add("show");
 });

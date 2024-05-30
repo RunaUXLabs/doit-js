@@ -34,6 +34,7 @@ btn.addEventListener("click", () => {
 	birthYear.value = "";
 	birthMonth.value = "";
 	birthDate.value = "";
+	birthYear.focus();
 });
 
 
