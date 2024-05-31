@@ -2,7 +2,7 @@ const number1 = document.querySelector("#number1");
 const number2 = document.querySelector("#number2");
 const button = document.querySelector("button");
 let result = document.querySelector("#result");
-function getGCD(n, m) {
+let getGCD = (n, m) => {
   let max = n > m ? n : m;
   let GCD = 0;
   for (let i = 1; i <= max; i++) {
@@ -11,7 +11,7 @@ function getGCD(n, m) {
     }
   }
   return GCD;
-}
+};
 let gcdHandler = () => {
   // 응용답
   const Int_number1 = parseInt(number1.value);
