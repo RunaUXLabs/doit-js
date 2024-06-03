@@ -1,13 +1,18 @@
 class Pet {
-  constructor(name, color) {
+  constructor(name, color, age) {
     this.name = name;
     this.color = color;
+    this.age = age;
   }
   run() {
-    alert(`${this.name}in running!!✨`);
+    alert(`${this.name} is running!!✨`);
   }
   reg() {
     return `${this.color}(색) ${this.name}이(가)\n 등록 되었습니다.`;
+  }
+  // 응용구간
+  reg2() {
+    return `${this.age}살 ${this.name}이(가)\n 등록 되었습니다.\n ${this.color}(색)으로 예쁜 아이이군요!😍`;
   }
 }
 // 기존답
@@ -24,17 +29,23 @@ btn.addEventListener('click', (e) => {
   e.preventDefault(); // 버튼 기본기능 막기
   let petname = document.querySelector('#petname');
   let petcolor = document.querySelector('#petcolor');
+  let petage = document.querySelector('#petage');
 
   if (petname.value !== "" && petcolor.value !== "") {
-    let regPet = new Pet(petname.value, petcolor.value);
-    result.textContent = `${regPet.reg()}`;
+    let regPet = new Pet(petname.value, petcolor.value, petage.value);
+    // result.textContent = `${regPet.reg()}`;
+    result.textContent = `${regPet.reg2()}`;
     petname.value = '';
     petcolor.value = '';
+    petage.value = '';
+    petname.focus();
     return;
   } else {
     result.textContent = `정보를 모두 입력해 주시기 바랍니다`;
     petname.value = '';
     petcolor.value = '';
+    petage.value = '';
+    petname.focus();
     return;
     // 호불호 이슈 있을수 있음. 정보가 하나라도 비면 메시지 출력이지만, 모든 input을 비우는 형식으로 제작했기때문. 폼이 짧기때문에 퉁쳐 만든것임.
   }
