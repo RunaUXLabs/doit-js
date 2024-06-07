@@ -13,11 +13,12 @@ class Lecture {
 // let 객체갈 될 변수명 = new Lecture(강사여부, 강의아이디, 수강생들)
 let A반 = new Lecture(false, 'L001', ["안씨", "한씨", "박씨"]);  // 강사 없음
 let B반 = new Lecture(true, 'L002', ["이씨", "최씨", "김씨"]);  // 강사 있음, 이씨가 강사임
-console.log(A반);
+console.log(B반);
 
 function getStudents(classRoom) {
   let { hasTutor, lectID, members } = classRoom;
   // 파라미터로 들어온 정보 객체구조분해할당, hasTutor, lectID, members변수로 불러올수있음
+  // console.log(members);
   let tutor, students; // 빈변수 선언
   hasTutor ? [tutor, ...students] = members : [...students] = members;
   // 1. 만들어진 객체에서 들어온 members를 추출하여 
@@ -28,7 +29,7 @@ function getStudents(classRoom) {
   // 3. students 변수를 뱉어라
 }
 
-// getStudents함수 보완해보기(시도가능한 수준임, 복제본에 연습해보고 업그레이드 한다)
+// 응용) getStudents함수 보완해보기(시도가능한 수준임, 복제본에 연습해보고 업그레이드 한다)
 // 구조분해할당되어 변수로 나온 tutor를 가지고(t/f), if문을 돌린다.
 // 선생의 유무를 가지고 문구를 만든다.
 // 파라미터 classRoom자리에 인자가 들어오면 선생유무 메시지까지 반환이 된다는 이야기 이니까, return을 배열로 뱉어서 밖에서 구조분해 할당하고 콘솔에 변수를 불러서 메시지를 완성시킨다.
@@ -37,7 +38,6 @@ function getStudents(classRoom) {
 // 강의 아이디를 찍고, 수강생만 뱉어라
 console.log(`강의 : ${A반.lectID}, 수강생 : ${getStudents(A반)}`); //안씨, 한씨, 박씨
 console.log(`강의 : ${B반.lectID}, 수강생 : ${getStudents(B반)}`); //최씨, 김씨
-
 
 
 // -------------------------------
