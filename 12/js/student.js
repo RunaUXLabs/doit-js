@@ -34,7 +34,15 @@
 fetch('student.json')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        console.log(data); // 파싱객체 확인
         console.log(data.name);
-        result.textContent = data.name;
+
+        // 퍼블리싱 한 상태 그대로 떼 와서 백팃구성
+        document.querySelector('#result').innerHTML = `
+            <h1>${data.name}</h1>
+            <ul>
+                <li>전공: ${data.major}</li>
+                <li>학년: ${data.grade}</li>
+            </ul>
+        `;
     });
