@@ -11,7 +11,7 @@ pizza
     result => console.log(result)
   )
   .catch(
-    err => console.log(err)
+    err => console.error(err)
   )
   .finally(
     () => console.log('완료')

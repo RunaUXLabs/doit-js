@@ -40,3 +40,11 @@ pizza
 //   result => console.log(result),
 //   err => console.log(err)
 // );      
+
+
+//정리
+// 프로미스객체.then(함수).catch(함수).finally(함수)
+// 프로미스객체(성공시/실패시 - 제작코드에서는 해야할 일이 정해져있지 않음. 넘길것만 지정되어있음)
+//   .then(성공시 실행할 일)
+//   .catch(실패시 실행할 일)
+//   .finally(다 끝났을 때 해야할 일)

@@ -16,5 +16,5 @@ try {
   console.error(err.message);
   // throw 신규에러객체 만들 당시에 키:값형식으로 넣은것이 아니므로
   // Error.message라 물어보면 undefined
-  // err.message라 물어보면 나옴
+  // err.message라 파라미터로 물어보면 나옴
 }
