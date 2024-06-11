@@ -27,3 +27,6 @@ fetch(quotesURL) // 파일 가져와라
     result.querySelector(".author").textContent = ` - ${data.quotes[random].author}`;
   })
   .catch(error => console.log(error)); // 에러처리가능, fetch가 프로미스를 뱉어주므로 try... catch의 catch만 빼서 사용가능
+
+
+// 응용해보기) async / await으로 fetch()구성해보기
