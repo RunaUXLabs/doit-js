@@ -57,8 +57,11 @@ form button {
   height: 50px;
   gap: 5px;
 }
-.completed {
+.todo.completed .todo-content {
   text-decoration: line-through;
+  opacity: 0.4;
+}
+.todo.completed button.complete-button {
   opacity: 0.4;
 }
 .todo .todo-content {
@@ -71,11 +74,15 @@ form button {
 .todo button {
   flex: 0 0 15%;
   border: none;
-  color: #fff;  
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.todo button.complete-button { background: #2D4B73; } 
-.todo button.delete-button { background: #F24822; } 
+.todo button.complete-button {
+  background: #2D4B73;
+}
+.todo button.delete-button {
+  background: #F24822;
+}

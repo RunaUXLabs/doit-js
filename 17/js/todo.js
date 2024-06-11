@@ -8,7 +8,7 @@ const 할일목록 = document.querySelector('#todo-list');
 
 // 함수선언
 function 할일추가(e) {
-    e.preventDefault();// 버튼 태그의 새로고침 막기
+    e.preventDefault(); // 버튼 태그의 새로고침 막기, form안에 button이 있을 때
 
     // 할일 추가되는 태그 요소 조합 만들기
     const li = document.createElement('li'); // li만들기
@@ -30,18 +30,20 @@ function 할일추가(e) {
     li.appendChild(완료버튼); // li안에 완료버튼넣기
     li.appendChild(삭제버튼); // li안에 삭제버튼넣기
     할일목록.appendChild(li); // ul안에 조합된 li 넣기
+    // 참고) UI생성함수 안에 해당 UI의 이벤트를 넣으면, 생성후 이벤트 처리(콜백)로 인식되므로, 신규생성 요소들 관리하기가 편한다. 삭제/완료버튼 클릭시 일어나는 일 추가하면 된다.
+    // 책의 예제는 li클릭했을때 일어날 수 있는 경우의 수 3개 관리하는 방식임.
+
 
     로컬스토리지저장(할일입력창.value); // 로컬스토리지에 저장하는 함수 콜링
-
     할일입력창.value = ''; // 입력창 초기화
 }
 // 엔터키 이벤트도 추가해서 사용성 올리기
 
 function 로컬스토리지저장(할일) {
     // 선이행, 과거이력 가져오기
-    let 할일들;
+    let 할일들; // 임시저장소 선언
     if (localStorage.getItem('할일들') === null) {
-        // 할일 저장된게 없으면 빈 배열로 할당해라
+        // 할일 저장된게 없으면 빈 배열로 재할당해라
         할일들 = [];
     } else {
         // 할일 저장된게 있으면 가져와서 파싱해서 객체로 재할당해라
@@ -57,13 +59,16 @@ function 로컬스토리지저장(할일) {
     // 콘솔에다가 적으면 스토리지 비울수 있음.
 }
 
+
 // 리스트를 클릭했을때, 할일관리함수가 실행한다.
 할일목록.addEventListener('click', 할일관리);
 
 function 할일관리(e) {
     // console.log(e.target);
     const 건드린대상 = e.target.classList[0];
-    // 사용자가 클릭한 리스트중에서 클릭이벤트가 일어난 대상의 클래스의 첫번째[0]를 뽑아서 건드린버튼에 할당해라
+    // 사용자가 클릭한 리스트중에서 클릭이벤트가 일어난 대상을 찾아라
+    // 대상.classList 그 대상이 보유한 클래스를 모두 떼서 배열로 가져와라
+    // 대상.classList[0] 클래스들의 첫번째[0]를 뽑아서 건드린버튼에 할당해라
     // console.log(건드린대상);
 
     //뽑아온 클래스명 (5개)중에서 내가 찾는게 (버튼관련 2개)있으면 실행문을 실행해라
@@ -107,44 +112,13 @@ function 로컬스토리지삭제(삭제할일) {
 
 /**
  * 로컬스토리지의 내용은 브라우저를 꺼도 나타나므로, DB를 활용 못하는 경우에는 남아있는 로컬스토리지의 내용을 화면에 표시하는것을 처음 로딩에 걸어두면 완성도가 높아보인다.
- * 
+ *
  * 보완사항
  * 삭제버튼 클릭시 로컬스토리지에서 제거가 되므로 문제가 없지만,
  * 완료버튼시 데이터의 형태를 저장정보에서도 변경하면
- * re-load를 했을 경우 완료리스트도 표현될 수 있음
+ * re-load를 했을 경우 완료한 상태가 기록된 형태로 다시리스트도 표현될 수 있음
  * 키: 할일들 과 값: [할일1,할일2,할일3,할일4] 형태를
- * 키: 할일들 과 값: [[할일1, true],[할일2, false]]의 형태로 구성한다.
- * 완료버튼 토글시 할일들 값의 배열의 두번째가 bool값에 의해 변동되게 설정
- * 
+ * 키: 할일들 과 값: [[할일1, true],[할일2, false]]의 형태나 객체구성으로 보완하면 된다.
+ *
  */
-
-function init() {
-    let 할일들;
-    if (localStorage.getItem('할일들') === null) 할일들 = [];
-    else 할일들 = JSON.parse(localStorage.getItem('할일들'));
-    // 남아있는 자료 불러오기
-
-    for (할일 of 할일들) {
-        const li = document.createElement('li');
-        li.classList.add('todo');
-
-        const span = document.createElement('span');
-        span.classList.add('todo-content');
-        span.textContent = 할일;
-
-        const 완료버튼 = document.createElement('button');
-        완료버튼.textContent = '완료';
-        완료버튼.classList.add('complete-button');
-
-        const 삭제버튼 = document.createElement('button');
-        삭제버튼.textContent = '삭제';
-        삭제버튼.classList.add('delete-button');
-
-        li.appendChild(span); // li안에 span넣기
-        li.appendChild(완료버튼); // li안에 완료버튼넣기
-        li.appendChild(삭제버튼); // li안에 삭제버튼넣기
-        할일목록.appendChild(li); // ul안에 조합된 li 넣기
-    }
-}
-init();
 
