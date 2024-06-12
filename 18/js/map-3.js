@@ -47,27 +47,27 @@ let 스타벅스매장리스트 = [
         위치: new kakao.maps.LatLng(36.6416187, 127.4281864)
     },
 ];
-let 마커들 = []; // 빈배열 선언
+let 클러스터에사용할마커들 = []; // 빈배열 선언
 // 스벅객체 돌면서 각 값을 이용하여 마커 생성 후 마커들에 삽입
 for (const 매장 of 스타벅스매장리스트) {
     // 마커생성
-    let 마커 = new kakao.maps.Marker({
+    let 새마커 = new kakao.maps.Marker({
         map: 기준지도,
         position: 매장.위치
     });
     // 정보창에 표시할 내용
-    let 정보창 = new kakao.maps.InfoWindow({
+    let 새정보창 = new kakao.maps.InfoWindow({
         content: `<div class="iw">${매장.이름}</div>`
     });
-    마커들.push(마커); // 매장정보를 이용해서 만든 마커를 마커들배열에 추가
+    클러스터에사용할마커들.push(새마커); // 매장정보를 이용해서 만든 마커를 마커들배열에 추가
 
     // 마커에 이벤트를 등록합니다
     // 마커에 마우스오버하면 makeOverListener() 실행
-    kakao.maps.event.addListener(마커, 'mouseover', 마우스오버시실행(기준지도, 마커, 정보창));
+    kakao.maps.event.addListener(새마커, 'mouseover', 마우스오버시실행(기준지도, 새마커, 새정보창));
     // 마커에서 마우스아웃하면 makeOutListener() 실행
-    kakao.maps.event.addListener(마커, 'mouseout', 마우스아웃시실행(정보창));
+    kakao.maps.event.addListener(새마커, 'mouseout', 마우스아웃시실행(새정보창));
 }
-console.log(마커들);
+console.log(클러스터에사용할마커들);
 
 
 // 클로저: 함수의 리턴값이 익명함수인경우, 함수참조값을 익명함수가 땡겨쓰려할 때 사용한다.
@@ -87,7 +87,7 @@ function 마우스아웃시실행(정보창) {
 }
 
 // 클러스터러 생성하기
-스벅클러스터러.addMarkers(마커들)
+스벅클러스터러.addMarkers(클러스터에사용할마커들)
 
 
 

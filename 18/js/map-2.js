@@ -42,21 +42,21 @@ let 스타벅스매장리스트 = [
 ];
 for (const 매장 of 스타벅스매장리스트) {
     // 마커를 생성합니다
-    let 마커 = new kakao.maps.Marker({
+    let 새마커 = new kakao.maps.Marker({
         map: 기준지도,
         position: 매장.위치
     });
 
     // 인포윈도우에 표시할 내용
-    let 정보창 = new kakao.maps.InfoWindow({
+    let 새정보창 = new kakao.maps.InfoWindow({
         content: `<div class="iw">${매장.이름}</div>`
     });
 
     // 마커에 이벤트를 등록
     // 마커에 마우스오버하면 makeOverListener() 실행
-    kakao.maps.event.addListener(마커, 'mouseover', 마우스오버시실행(기준지도, 마커, 정보창));
+    kakao.maps.event.addListener(새마커, 'mouseover', 마우스오버시실행(기준지도, 새마커, 새정보창));
     // 마커에서 마우스아웃하면 makeOutListener() 실행
-    kakao.maps.event.addListener(마커, 'mouseout', 마우스아웃시실행(정보창));
+    kakao.maps.event.addListener(새마커, 'mouseout', 마우스아웃시실행(새정보창));
 }
 
 // 클로저: 함수의 리턴값이 익명함수인경우, 함수참조값을 익명함수가 땡겨쓰려할 때 사용한다.
