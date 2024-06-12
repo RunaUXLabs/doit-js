@@ -8,7 +8,7 @@ const 할일목록 = document.querySelector('#todo-list');
 
 // 함수선언
 function 할일추가(e) {
-    e.preventDefault(); // 버튼 태그의 새로고침 막기, form안에 button이 있을 때
+    e.preventDefault(); // 버튼 태그의 새로고침 막기, form안에 submit기능 button이 있을 때
 
     // 할일 추가되는 태그 요소 조합 만들기
     const li = document.createElement('li'); // li만들기
@@ -35,7 +35,7 @@ function 할일추가(e) {
 
 
     로컬스토리지저장(할일입력창.value); // 로컬스토리지에 저장하는 함수 콜링
-    할일입력창.value = ''; // 입력창 초기화
+    // 할일입력창.value = ''; // 입력창 초기화
 }
 // 엔터키 이벤트도 추가해서 사용성 올리기
 
