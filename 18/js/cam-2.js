@@ -16,7 +16,8 @@ fetch(url)
     .then(결과 => 결과.json())
     .then(내용물 => {
         console.log(내용물);
-        document.querySelector('.lottie').classList.add('off'); // 로티파일 감추기
+        // document.querySelector('.lottie').classList.add('off'); // 로티파일 감추기
+        document.querySelector('.lottie').remove(); // 로티파일 감추기
 
         let 캠핑장들 = 내용물.response.body.items.item;
         console.log(캠핑장들);
