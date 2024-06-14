@@ -8,13 +8,15 @@ let 지도상자 = document.querySelector('#map'), // 지도를 표시할 div
         center: new kakao.maps.LatLng(학원위도, 학원경도), // 지도의 중심좌표
         level: 12 // 지도의 확대 레벨
     };
-// 공공데이터포털에서 캠핑장정보 가져옴 // 3553개, 100개만 임시테스트 해볼것
-let url3 = `https://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=test&serviceKey=서비스키입력&_type=json`;
+// 공공데이터포털에서 캠핑장정보 가져옴 // 240614일 기준 캠핑장 3924개, 요청속도 감안해서 제한된 숫자만 가져오기
+const SERVICEKEY = `Iv76qim5Ny6HUJz794fWsPnAJ%2BwHb%2BsdheosUWgR8rbILCn7M9L6zNFDr%2FHWJtuGhpLXdiP%2FfvROWpDUW7Zupg%3D%3D`;
+const url = `https://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=200&pageNo=1&MobileOS=ETC&MobileApp=mobile&serviceKey=${SERVICEKEY}&_type=json`;
 
-fetch(url3)
+fetch(url)
     .then(결과 => 결과.json())
     .then(내용물 => {
-        // console.log(내용물);
+        console.log(내용물);
+        document.querySelector('.lottie').classList.add('off'); // 로티파일 감추기
 
         let 캠핑장들 = 내용물.response.body.items.item;
         console.log(캠핑장들);

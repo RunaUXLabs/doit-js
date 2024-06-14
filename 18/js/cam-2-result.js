@@ -17,7 +17,7 @@ var clusterer = new kakao.maps.MarkerClusterer({
   minLevel: 6 // 클러스터 할 최소 지도 레벨 
 });
 
-// 서버에서 가져오기 // 3744
+// 서버에서 가져오기
 const url = 'https://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=3744&pageNo=1&MobileOS=ETC&MobileApp=TEST&serviceKey=서비스키입력&_type=json';
 
 fetch(url)

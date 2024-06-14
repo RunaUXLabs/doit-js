@@ -11,15 +11,21 @@
 <body>
   <script>
     // 서버에서 가져오기
-    const url = 'https://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=50&pageNo=1&MobileOS=ETC&MobileApp=TEST&serviceKey=gptlfeF0tckKWZugnRmyvS4wuIp7K2dDyLC9SjDzp%2BIk8HEEiN8OH9m9Xm1%2BH%2FIvBWPxcRBQ8mhpUGvA9n9yVA%3D%3D&_type=json';
+    const url = 'https://apis.data.go.kr/B551011/GoCamping/basedList?MobileOS=ETC&MobileApp=mobile&serviceKey=Iv76qim5Ny6HUJz794fWsPnAJ%2BwHb%2BsdheosUWgR8rbILCn7M9L6zNFDr%2FHWJtuGhpLXdiP%2FfvROWpDUW7Zupg%3D%3D&_type=json';
 
     fetch(url)
       .then(result => result.json())   // json 파일을 객체로 변환
       .then(json => {
         console.log(json);
+        console.log(json.response);
+        console.log(json.response.body);
+        console.log(json.response.body.items);
+        console.log(json.response.body.items.item);
+        console.log(json.response.body.items.item[7]);
+
         const data = json.response.body.items.item;  // 객체에서 실제 내용만 data로 저장   
         console.log(data);
-        console.log(data[3]);
+        console.log(data[7]);
       });
   </script>
 </body>
